@@ -8,7 +8,7 @@ from assistant import ASSISTANT_NAME, FAQ
 from llm_client import MissingAPIKeyError, call_language_model_json
 from weather import get_weather_report
 
-QUERIES_FILE = "consultas_del_dia.json"
+QUERIES_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "consultas_del_dia.json")
 REPORTS_DIR = "reportes"
 LOG_FILE = "pipeline.log"
 MAX_LENGTH = 500
